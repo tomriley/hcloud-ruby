@@ -155,8 +155,8 @@ module Hcloud
       path << "?#{q.join('&')}"
       r = Typhoeus::Request.new(
         "https://api.hetzner.cloud/v1/#{path}",
-        timeout: 5,
         {
+          timeout: 5,
           headers: {
             'Authorization' => "Bearer #{token}",
             'User-Agent' => user_agent,
